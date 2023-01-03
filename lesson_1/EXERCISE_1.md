@@ -31,7 +31,7 @@ Create a hello world program with multiple lines of code e.g multiple prints
 Make sure you have a functional git installation.
 
 ```bash
-git --version 
+git --version
 ```
 
 ### `Exercise` Java JDK
