@@ -14,7 +14,7 @@ class LearnHexadecimal {
         answer.isIntegerWithHex(8, "0x8");
         answer.isIntegerWithHex(10, "0xa");
         answer.isIntegerWithHex(11, "0xB");
-        answer.isIntegerWithHex(15, "0xd");
+        answer.isIntegerWithHex(15, "0xf");
         answer.isIntegerWithHex(16, "0x10");
         answer.isIntegerWithHex(17, "0x11");
         answer.isIntegerWithHex(25, "0x19");

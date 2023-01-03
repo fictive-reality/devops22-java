@@ -34,7 +34,7 @@ class LearnTypesMinMax {
 
         // Find the long min/max
         // https://docs.oracle.com/javase/specs/jls/se17/html/jls-4.html#jls-4.2.1
-        answer.isMinimumLong(-9223372036854775808);
-        answer.isMaximumLong(9223372036854775807);
+        answer.isMinimumLong(-9223372036854775808L);
+        answer.isMaximumLong(9223372036854775807L);
     }
 }

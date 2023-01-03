@@ -19,7 +19,7 @@ class LearnTypes {
 
         answer.isDouble(1.1d);
         answer.isLong(0L);
-        answer.isChar("a");
+        answer.isChar('a');
         answer.isBoolean(false);
     }
 }
