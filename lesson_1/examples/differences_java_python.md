@@ -15,7 +15,7 @@ CONSTANT = "yes" # Uses CONSTANT_CASE
 
 Java naming conventions:
 ```java
-String aVariable = "uses camelCase"
+String aVariable = "uses camelCase";
 
 class MyClass {
     // Uses PascalCase
