@@ -4,6 +4,7 @@ public class DebugHello {
         System.out.println(message);
         System.out.println("Dennis was here!");
         System.out.println("Dungeon run was one hell of a game!");
+        System.out.println("hejhej");
 
     }
 }
