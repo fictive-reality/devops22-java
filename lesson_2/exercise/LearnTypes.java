@@ -6,20 +6,19 @@ class LearnTypes {
     public static void main(String[] args) {
         LearnJavaHelpers answer = new LearnJavaHelpers();
 
-        // Uncomment & fill in the missing values
         answer.isString("hello world");
-        // answer.isFloat(?);
-        // answer.isInteger(?);
+        answer.isFloat(1.0f);
+        answer.isInteger(1);
 
-        // byte any_byte = ?;
-        // answer.isByte(any_byte);
+        byte any_byte = 1;
+        answer.isByte(any_byte);
 
-        // short any_short = ?;
-        // answer.isShort(any_short);
+        short any_short = 1;
+        answer.isShort(any_short);
 
-        // answer.isDouble(?);
-        // answer.isLong(?);
-        // answer.isChar(?);
-        // answer.isBoolean(?);
+        answer.isDouble(1.0);
+        answer.isLong(1L);
+        answer.isChar('a');
+        answer.isBoolean(true);
     }
 }
