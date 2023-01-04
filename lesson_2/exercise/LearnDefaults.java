@@ -21,4 +21,8 @@ class LearnDefaults {
         // answer.trueOrThrow(LearnJavaHelpers.a_string == ?);
         // answer.trueOrThrow(LearnJavaHelpers.a_boolean == ?);
     }
+    {
+    public static void main(String [] args) {
+        System.out.println(answer);
+        }
 }
