@@ -33,6 +33,7 @@ public class ConditionalExample {
         } else {
             System.out.println("else condition is: " + condition);
         }
+        String val = condition == 0 ? "not 1" : "is 1";
 
     }
 }
