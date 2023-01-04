@@ -1,4 +1,4 @@
-package lesson_2.examples;
+package examples;
 
 class PrimitiveVsReference {
 

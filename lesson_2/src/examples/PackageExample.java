@@ -1,4 +1,4 @@
-package lesson_2.examples;
+package examples;
 // package follows folder structure
 
 // public makes the class importable outside current package.

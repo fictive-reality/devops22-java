@@ -1,4 +1,4 @@
-package lesson_2.examples;
+package examples;
 
 public class BitExample {
     public static void main(String[] args) {

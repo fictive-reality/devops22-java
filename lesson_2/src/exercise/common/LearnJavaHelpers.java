@@ -1,4 +1,4 @@
-package lesson_2.exercise.common;
+package exercise.common;
 
 // DON'T MODIFY THIS FILE
 
