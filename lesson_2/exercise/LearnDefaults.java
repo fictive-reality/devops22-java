@@ -12,13 +12,13 @@ class LearnDefaults {
 
         // What are the default value for these types?
         answer.trueOrThrow(LearnJavaHelpers.a_byte == 0);
-        // answer.trueOrThrow(LearnJavaHelpers.a_short == ?);
-        // answer.trueOrThrow(LearnJavaHelpers.a_int == ?);
-        // answer.trueOrThrow(LearnJavaHelpers.a_long == ?L);
-        // answer.trueOrThrow(LearnJavaHelpers.a_float == ?f);
-        // answer.trueOrThrow(LearnJavaHelpers.a_double == ?d);
-        // answer.trueOrThrow(LearnJavaHelpers.a_char == ?);
-        // answer.trueOrThrow(LearnJavaHelpers.a_string == ?);
-        // answer.trueOrThrow(LearnJavaHelpers.a_boolean == ?);
+        answer.trueOrThrow(LearnJavaHelpers.a_short == 0);
+        answer.trueOrThrow(LearnJavaHelpers.a_int == 0);
+        answer.trueOrThrow(LearnJavaHelpers.a_long == 0L);
+        answer.trueOrThrow(LearnJavaHelpers.a_float == 0.0f);
+        answer.trueOrThrow(LearnJavaHelpers.a_double == 0.0d);
+        answer.trueOrThrow(LearnJavaHelpers.a_char == '\u0000');
+        answer.trueOrThrow(LearnJavaHelpers.a_string == null);
+        answer.trueOrThrow(LearnJavaHelpers.a_boolean == false);
     }
 }
