@@ -8,18 +8,21 @@ class LearnTypes {
 
         // Uncomment & fill in the missing values
         answer.isString("hello world");
-        // answer.isFloat(?);
-        // answer.isInteger(?);
+        answer.isFloat(2.0f);
+        answer.isInteger(2);
 
-        // byte any_byte = ?;
-        // answer.isByte(any_byte);
+        byte any_byte = 0b0010;
+        answer.isByte(any_byte);
 
-        // short any_short = ?;
-        // answer.isShort(any_short);
+        short any_short = 2;
+        answer.isShort(any_short);
+        double a_double = 3;
+        answer.isDouble(a_double);
 
-        // answer.isDouble(?);
-        // answer.isLong(?);
-        // answer.isChar(?);
-        // answer.isBoolean(?);
+        answer.isLong(5L);
+
+        answer.isChar('A');
+
+        answer.isBoolean(false);
     }
 }
