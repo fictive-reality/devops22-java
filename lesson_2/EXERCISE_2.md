@@ -25,7 +25,7 @@ In this exercise you can get help by Java tutorial [Primitive Data Types](https:
 
 In the repository [devops22-java](https://github.com/fictive-reality/devops22-java)
 
-1. Hand in the file and screenshots with a successful run of:
+1. Hand in the code files and screenshots with a successful run of:
 
    - `LearnDefaults`
    - `LearnHexadecimal`
