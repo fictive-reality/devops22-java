@@ -2,8 +2,10 @@ package lesson_2.examples;
 
 public class LiteralExample {
     public static void main(String[] args) {
-        int a_int = 1;
-        System.out.println(a_int);
+        int decimal_int = 1;
+        System.out.println(decimal_int);
+        int octal_int = 05;
+        System.out.println(octal_int);
         int hex_int = 0xff;
         System.out.println(hex_int);
 

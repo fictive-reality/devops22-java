@@ -2,7 +2,7 @@
 
 ## Information
 
-Today we will build & run java programs.
+Today we will build & run java web apps.
 
 ### Jetty
 
