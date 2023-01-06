@@ -1,25 +1,21 @@
 package lesson_2.exercise;
 
-import lesson_2.exercise.common.LearnJavaHelpers;
-
 class LearnTypes {
     public static void main(String[] args) {
-        LearnJavaHelpers answer = new LearnJavaHelpers();
-
-        // Uncomment & fill in the missing values
+       // LearnJavaHelpers answer = new LearnJavaHelpers();
         answer.isString("hello world");
-        // answer.isFloat(?);
-        // answer.isInteger(?);
+        answer.isFloat(0.5);
+        answer.isInteger(81);
 
-        // byte any_byte = ?;
-        // answer.isByte(any_byte);
+        byte any_byte = 90;
+        answer.isByte(any_byte);
 
-        // short any_short = ?;
-        // answer.isShort(any_short);
+        short any_short = 20;
+        answer.isShort(any_short);
 
-        // answer.isDouble(?);
-        // answer.isLong(?);
-        // answer.isChar(?);
-        // answer.isBoolean(?);
+        answer.isDouble(1.5);
+        answer.isLong(321L);
+        answer.isChar("c");
+        answer.isBoolean(false);
     }
 }
