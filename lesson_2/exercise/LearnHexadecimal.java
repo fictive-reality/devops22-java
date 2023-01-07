@@ -10,19 +10,19 @@ class LearnHexadecimal {
         // https://docs.oracle.com/javase/specs/jls/se11/html/jls-3.html#jls-HexNumeral
         // https://simple.wikipedia.org/wiki/Hexadecimal
         answer.isIntegerWithHex(0, "0x0");
-        // answer.isIntegerWithHex(1, "");
-        // answer.isIntegerWithHex(8, "");
-        // answer.isIntegerWithHex(10, "");
-        // answer.isIntegerWithHex(11, "");
-        // answer.isIntegerWithHex(15, "");
-        // answer.isIntegerWithHex(16, "");
-        // answer.isIntegerWithHex(17, "");
-        // answer.isIntegerWithHex(25, "");
-        // answer.isIntegerWithHex(26, "");
-        // answer.isIntegerWithHex(100, "");
-        // answer.isIntegerWithHex(255, "");
-        // answer.isIntegerWithHex(256, "");
-        // answer.isIntegerWithHex(512, "");
+        answer.isIntegerWithHex(1, "0x1");
+        answer.isIntegerWithHex(8, "0x8");
+        answer.isIntegerWithHex(10, "0xA");
+        answer.isIntegerWithHex(11, "0xB");
+        answer.isIntegerWithHex(15, "0xF");
+        answer.isIntegerWithHex(16, "0x10");
+        answer.isIntegerWithHex(17, "0x11");
+        answer.isIntegerWithHex(25, "0x19");
+        answer.isIntegerWithHex(26, "0x1a");
+        answer.isIntegerWithHex(100, "0x64");
+        answer.isIntegerWithHex(255, "0xff");
+        answer.isIntegerWithHex(256, "0x100");
+        answer.isIntegerWithHex(512, "0x200");
 
         // 0: 0b0000    -> 0x0
         // 1: 0b0001    -> 0x1
