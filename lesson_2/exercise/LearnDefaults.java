@@ -11,14 +11,14 @@ class LearnDefaults {
         // https://docs.oracle.com/javase/specs/jls/se11/html/jls-4.html#jls-4.12.5
 
         // What are the default value for these types?
-        answer.trueOrThrow(LearnJavaHelpers.a_byte == 90);
-        answer.trueOrThrow(LearnJavaHelpers.a_short == 20);
-        answer.trueOrThrow(LearnJavaHelpers.a_int == 81);
-        answer.trueOrThrow(LearnJavaHelpers.a_long == 321L);
-        answer.trueOrThrow(LearnJavaHelpers.a_float == 0.5f);
-        answer.trueOrThrow(LearnJavaHelpers.a_double == 1.5d);
-        answer.trueOrThrow(LearnJavaHelpers.a_char == "c");
-        answer.trueOrThrow(LearnJavaHelpers.a_string == "Hello World");
-        answer.trueOrThrow(LearnJavaHelpers.a_boolean == false);
+        answer.trueOrThrow(LearnJavaHelpers.a_byte == 0);
+        answer.trueOrThrow(LearnJavaHelpers.a_short == 0);
+        answer.trueOrThrow(LearnJavaHelpers.a_int == 0);
+        answer.trueOrThrow(LearnJavaHelpers.a_long == 0L);
+        answer.trueOrThrow(LearnJavaHelpers.a_float == 0f);
+        answer.trueOrThrow(LearnJavaHelpers.a_double == 0d);
+        answer.trueOrThrow(LearnJavaHelpers.a_char == 'a');
+        answer.trueOrThrow(LearnJavaHelpers.a_string == null);
+        answer.trueOrThrow(LearnJavaHelpers.a_boolean == true);
     }
 }
