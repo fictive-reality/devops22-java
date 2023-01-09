@@ -2,8 +2,6 @@ import java.util.Scanner;
 
 public class Switch {
 
-    // Individual Exercise: Write a switch case
-
     void rockSuggestion(String music) {
         switch (music) {
             case "1": {
