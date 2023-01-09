@@ -11,9 +11,9 @@ public class N_MultiplicationArrays {
         int[] rest = new int[factors.length - 1];
 
         // Group exercise: What does this line do?
-        System.arraycopy(factors, 1, rest, 0, factors.length - 2);
+        System.arraycopy(factors, 1, rest, 0, factors.length - 1);
 
-        for (int factor : factors) {
+        for (int factor : rest) {
             product *= factor;
         }
         return product;
@@ -24,7 +24,7 @@ public class N_MultiplicationArrays {
         System.out.println(multiplication(1, 2, 3));
         System.out.println(multiplication(1, 2, 3, 0));
 
-        System.out.println(multiplication(1));
+        System.out.println(multiplication(2, 4, 2, 4));
         System.out.println(multiplication(2, 7));
     }
 }
