@@ -2,7 +2,6 @@ package lesson_3.examples;
 
 // Group Exercise: Analyse and describe this program
 public class N_MultiplicationArrays {
-    // int[] factors = { 1, 2, 3, 4, 5 };
 
     static int multiplication(int... factors) {
         if (factors.length < 2) {
@@ -26,6 +25,6 @@ public class N_MultiplicationArrays {
         System.out.println(multiplication(1, 2, 3, 0));
 
         System.out.println(multiplication(1));
-        System.out.println(multiplication(1, 7));
+        System.out.println(multiplication(2, 7));
     }
 }

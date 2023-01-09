@@ -15,7 +15,7 @@ CONSTANT = "yes" # Uses CONSTANT_CASE
 
 Java naming conventions:
 ```java
-String aVariable = "uses camelCase"
+String aVariable = "uses camelCase";
 
 class MyClass {
     // Uses PascalCase
@@ -96,7 +96,7 @@ Python as no types written in the code (except for typing extensions)
 has_wheels = True
 uses_fuel = False
 has_battery = True
-is_a_car = has_wheels and (uses_fuel or has_battery)
+is_a_car = has_wheels and (uses_fuel or not has_battery)
 name = "Volvo
 name += " is a car"
 ```
@@ -106,7 +106,7 @@ Java has types, different boolean operators and cannot use + - operations on pri
 boolean hasWheels = true
 boolean usesFuel = false
 boolean hasBattery = true
-boolean isACar = hasWheels && (usesFuel || hasBattery)
+boolean isACar = hasWheels && (usesFuel || !hasBattery)
 String name = "Volvo"
 // Illegal
 name += " is a car"

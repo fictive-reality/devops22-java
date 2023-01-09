@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class E_ContinueExample {
 
-    // Individual Exercise: Write a loop that uses break and continue
+    // Individual Exercise: Write a `while` that uses `continue`.
     public static void main(String[] args) throws InterruptedException {
         Random rand = new Random();
         int start = 50;

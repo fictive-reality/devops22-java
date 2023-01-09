@@ -9,3 +9,4 @@
 ## Extra
 
 - [Understanding Java bytecode](https://medium.com/swlh/introduction-to-java-bytecode-you-didnt-know-you-needed-22654cc34ab8)
+- [Decimal, Hexadecima and Binary](https://www.mathsisfun.com/binary-decimal-hexadecimal.html)

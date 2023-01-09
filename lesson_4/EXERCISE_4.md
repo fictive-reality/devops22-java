@@ -8,12 +8,13 @@ The main goal of this exercise is to learn Java class syntax and object oriented
 
 - Pick a design problem, e.g.
 -- A simulator to drive different vehicles
+-- A simple bank app where you can have different types of accounts, e.g. savings (interest) and checkings
 -- A game where you take care of a small zoo
 -- A drawing app where you can place different shapes of different sizes
 -- A simple HR system with managers and employees that can be hired or let go
 -- A simple webshop system that sells hats
--- A document writing app with support for different blocks such as text, images, videos and tables
--- A simple software to represent running on different models of a system camera (a camera with interchangable lenses)
+-- A presentation slide app where each slide can be either a text, an image or a table
+-- Shared software for various models of smart home lights (e.g. basic, dimmable, motion-activated) 
 -- Or come up with your own idea of a real world problem to design
 
 For your design problem, do:

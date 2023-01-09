@@ -6,27 +6,23 @@ The main goal of this exercise is to learn basic java syntax. We will also learn
 
 ### Group exercise
 
-1. Write a do while loop
+1. Method that uses throws (see J_CheckedExceptionExample.java)
 
-2. Method that uses throws
+2. Method that uses variable length arguments (see L_VariableLengthArgumentExample.java)
 
-3. Method that uses variable length arguments
+3. Rewrite to fill a 2D array with values (see I_ForMultipleInitsExample.java)
 
-4. Analyze Multiplication arrays
+4. Analyze and describe code in with Multiplication arrays (see N_MultiplicationArrays.java)
 
 ### Individual `Exercise` Java Basic syntax
 
-1. In repository devops22-java [lesson_3](https://github.com/fictive-reality/devops22-java/tree/main/lesson_3)
+1. Write a class that uses a `switch`.
 
-2. Write a class that uses a `switch`.
+2. Write a class `Circle` that calculates the `area`, `circumference` and holds a variable `radius`.
 
-3. Write a class `Circle` that calculates the `area`, `circumference` and holds a variable `radius`.
+3. Write a `while` loop that uses `break` and one that uses `continue`.
 
-4. Write a `while` loop that uses a `break` or `continue`.
-
-5. Hand in the actual files.
-
-6. [EXTRA] Create a single program that uses the features from above.
+4. [EXTRA] Create a single program that uses all the features from above.
 
 ## Hand in instructions
 
@@ -36,10 +32,10 @@ In the repository [devops22-java](https://github.com/fictive-reality/devops22-ja
 
     - Class using switch
     - Circle class
-    - Class with while loop
+    - Class with 2 while loops
 
 ### General instructions
 
 - Create a branch with name `YOURUSERNAME_lesson_3`
 
-Hand in your exercise in a `Pull Request` that contains screenshot[s] and file[s]. You can also use the feature `attach a file` for screenshots in your `Pull Request`
+Hand in your exercise in a `Pull Request` that contains file[s].
