@@ -45,7 +45,7 @@ public class Calculator {
             while (true) {
                 System.out.print("Do you want to calculate area or circumference?: ");
                 String choice = sc.nextLine();
-                if (!choice.equalsIgnoreCase("area") || choice.equalsIgnoreCase(null)) {
+                if (!choice.equalsIgnoreCase("area") && !choice.equalsIgnoreCase("circumference")) {
                     System.out.println("Invalid input.");
                     continue;
                 }
