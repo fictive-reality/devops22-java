@@ -32,11 +32,9 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		// Vad säger hunden?
 		String sound = animalsound("dog");
 		System.out.println(sound);
 
-		// Cirkelmatte
 		Circle circ = new Circle(3.0f);
 		float radius = circ.area();
 		float circum = circ.circumference();
