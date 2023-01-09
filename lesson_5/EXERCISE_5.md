@@ -2,83 +2,84 @@
 
 ## Instructions
 
-The main goal of this exercise is to learn about databases in Java. Before you start, make sure you only open **lesson_5 folder in VS Code**.
-- To have Docker installed
+This exercise is a continuation of the `Group Exercise` from lesson 4. You will now start implementing some of your ideas. But the focus of this group project is NOT to complete as many features as possible, it's to do as good testing as possible. In fact, you can write most tests without having any completed feature code at all.
 
-### `Exercise` Install Docker
 
-1. Follow instructions on https://www.docker.com/
+## `Mini project` Test Driven development
 
-2. Take screenshot of running `docker --version`
+In this mini project you should continue with the same team as in lesson 4. 
 
-### `Exercise` Install Maven
+1. One person in your team should start a new repository on GitHub and invite the others as collaborators / members. Also invite me as collaborator.
+2. Create a NAMES.md file with all team members GitHub username, and their first and last name.
+3. Create a DESIGN.md file. Write or copy some bullet points from Lesson 4 that describes the desired features, including nouns and verbs used. Also add the diagram as an image or similar. You may change or improve on the design but don't spend more than 1 hour on this.
+4. Setup the project using Maven. See detailed instructions below.
+5. Now you can split up and start writing classes, dummy methods and tests. You can pick the best code that you wrote individually in Lesson 4, or you could start fresh.
 
-1. Follow instruction how to install , if you install with brew on MacOS check FEP.md.
+### Requirements
 
-2. Run mvn --version and take a screenshot
+* At least three classes
+* One test file per class file
+* At least a total of 20 test cases and none of them failing
+* I expect everyone to commit code in this project and I may check commit history, so make sure you either commit individually OR that you write in the commit message if someone else was helping to write that commit.
 
-    ```bash
-    mvn --version
-    ```
+The focus of this exercise is NOT to write a complete and functioning app, it's to practice testing! So start with writing classes and good tests, then as time allows follow the Test-Driven Design loop to step-by-step make the app more functional. It is fully expected that the submitted code still contains dummy methods or is missing functionality from the original design. The important part is that the tests work, covers the expected behaviour from the design and that they are varied and useful.
 
-3. Also make sure you have the VS Code plugin `Maven for Java` installed.
+If the classes from your app idea doesn't seem to have enough things to test, just come up with additional design requirements (features) that would imply more testable methods.
 
-### `Exercise` Plain Java Database usage
+### Good tests
 
-1. Setup a database server, it's recommended to use a docker image. The database we will use is MySQL, which is [here on Docker Hub](https://hub.docker.com/_/mysql). Read the instructions on there for how to define how to choose database name, username and password and for what command to run to start Docker.
+There's lots of info in LINKS and online about writing good tests, but here are a few tips:
 
-2. In `src/main/java/*` folders you will find a class called `JDBCUtils.java` with the package `se.nackademin.jdbc`. You'll also find a `Main.java`.
-   1. Read through the `Main.java` code and understand how the `JDBCUtils.java` is used
-   2. Read through the `JDBCUtils.java`, the code contains some flaws and limitations, that we will later fix. For now its enough to understand the code.
-      1. Notice the instance field `username` and `password` is it needed at all? Can you improve it somehow?
-      2. The instance method `createDatabase` will create a database for you, but it will not setup any tables.
-      3. The instance method `getConnection` builds a connection string, but it doesn't specify a database name in the JDBC url, read more about the format [https://dev.mysql.com/doc/connector-j/8.0/en/connector-j-reference-jdbc-url-format.html]
+- Always start with a good design on what SHOULD and SHOULDN'T happen, and write the test based on that
+- If you are testing inherited classes, you don't always need to write the same tests for both the parent and the child class if the method hasn't changed!
+- Make sure to not only test that the method works as intended, but also how it should handle bad arguments, incorrect data or that it's in the wrong state (not initialized, not saved, etc).
+- Try to vary the tests and think creatively what could go wrong in real life.
+- Write more tests on methods that you expect to be more complicated, and fewer or no tests on very simple methods, such as getters.
+- As you write the tests, you may want to change (refactor) the dummy methods to be easier to test, that's a good side effect of testing. For example, it's typical you want to split up a method to easier test parts of it, or add arguments to cover more variations.
 
-3. Before we can test the code we need to ensure we have a needed *dependency* to the project: a JDBC connector (driver) for MySQL. This dependency is already defined in the `pom.xml` file which describes the project using the **Maven** packaging framework.
-   1. In VS Code Explorer tab, go to the bottom to find the Maven pane. Confirm that it shows a dependency called `com.mysql:mysql-connector-j:8.0.31`.
-   2. Under Lifecycle, run the install command to install all dependencies.
+### Extra Extensions [Optional]
 
-4. Run the project (or main function in Main.java). When it works, it should output `Connected to db`. But not everything is setup correctly from start, so you will need to check JDBCUtils.java file and the MySQL Docker page to ensure that the database is correctly found and connected to.
+If you have time left you can try out some extras, see LINKS.md for more info.
 
-5. You can manually create a table with mysql tooling with for example [mysql workbench](https://www.mysql.com/products/workbench/) or write code that does it with `createDatabase`. Scroll down to the header [Creating Tables with JDBC API](https://docs.oracle.com/javase/tutorial/jdbc/basics/tables.html#create)
+* Use "hamcrest matchers" for more readable and flexible tests.
+* Add a coverage plugin to maven, check the links file for JaCoCo. Properly configured it will add a check that your project has good enough coverage, it will also generate a site report in html where you can browse your coverage.
+* Try to write some mocks with Mockito.
+* Complete the code in the body of dummy methods to make the app more feature complete
 
-6. Now when you know the database works and you can inspect it manually with a CLI or MySQL workbench. Add `CRUD` methods to your `JDBCUtils` you are recommended to use [prepared statements](https://docs.oracle.com/javase/tutorial/jdbc/basics/prepared.html#create_ps). You decide yourself what your application and database will do.
-   - Create (A method that can create a row of data `INSERT INTO`)
-   - Read (A method that can read all or a single row `SELECT`)
-   - Update (A method that can update a row `UPDATE`)
-   - Delete (A method that can `DELETE` a row)
+### Setting up the project with Maven
 
-7. Write code in `Main` that calls your CRUD methods in `JDBCUtils`.
+```bash
+# Make sure maven works, should be installed since lesson 5
+mvn --version
 
-### `Exercise` [EXTRA] Spring boot database usage with a ORM
+# Clone the repository if it was created first on GitHub
+# Make sure to clone it outside the `devops22-java` folder to avoid conflict
+# Replace all elements inside <brackets> below with the real names you chose
+cd <your/source/path/somewhere>
+git clone git@github.com:<myuser>/<myrepo>.git
 
-This is an extra exercise, it's not mandatory. Follow the guide [accessing data mysql](https://spring.io/guides/gs/accessing-data-mysql/)
+# This command will create a new folder, named by the artifactId
+# IMPORTANT, don't go into the <myrepo> directory, run this outside, and make sure DartifactId is the exact same as the folder name
+mvn archetype:generate -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false -DgroupId=se.nackademin -DartifactId=<myrepo> 
 
-1. Create a new repository where you can package up the downloaded file in the following step
-2. Follow the guide from spring.io. [accessing data mysql](https://spring.io/guides/gs/accessing-data-mysql/)
+# You should get a generated java project
+cd <into/the/repo>
+mvn install
+# it should print BUILD SUCCESS
 
-    ```text
-    # If you use the spring initializr at <https://start.spring.io/>
-    1. Select Project `Maven project`
-    2. Select Language `Java`
-    3. Add `Spring Web`, `Spring Data JPA`, `MySQL Driver`
-    ```
+# Then also try mvn test
+mvn test 
 
-3. [optional] Hand in, give me access to your repository
+# it should print BUILD SUCCESS, some metrics and further up you should see [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+```
+
+Note that you can also check Maven from inside VS Code in the Maven pane in the Explorer tab, and in the Testing tab you can also run the tests. So you don't need to use `mvn` on the command line.
+
 
 ## Hand in instructions
 
-### General hand in instructions
+This is a group exercise so make sure that all members of the team has committed something to the code.
 
-- Create a branch with name `YOURUSERNAME_lesson_5`
-
-Hand in your exercise in a `Pull Request` that contains screenshot[s] and file[s]. You can also use the feature `attach a file` for screenshots in your `Pull Request`
-
-### What to hand in
-
-Hand in files:
-
-- Added files & modified files
-- Provide a screenshot of the maven and Docker version
-- Provide a screenshot of the database table
-- Provide a screenshot of the java console output from a queried database row.
+* [ ] Ensure you have a NAMES.md file that contains the full name of all team members.
+* [ ] Invite me as collaborator to the repository
+* [ ] Recommended method of handing in: when you are done on e.g. branch `main`, create a separate branch `submission` and make a pull request from main to submission. Then set me as Reviewer. In this way it's easy for me to comment on your submission. If this doesn't work, you can also email me when you are done.
