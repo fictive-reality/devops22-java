@@ -3,18 +3,17 @@ public class Individual_exercise {
 
     // WHILE LOOP
         public static void main(String[] args) {
-            try (Scanner sc = new Scanner(System.in)) {
-                System.out.print("Guess my favourite animal ");
-                String input = sc.nextLine();
-                while (!"Cat".equalsIgnoreCase(input)) {
-                    System.out.print("Guess my favourite animal ");
-                    input = sc.nextLine();
-                    System.out.println(input);
-                }
-            }
+         int number = 100;
+         int x = 1;
+         while (x < 100) {
+            x ++;
+            System.out.println(x);
+            if (x == number) {
+                break;}
+            
+        }
         }
     }
-
     // Circle calculation
 
 class Circle {
