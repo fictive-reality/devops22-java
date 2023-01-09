@@ -5,7 +5,7 @@ import java.util.Random;
 public class D_BreakExample {
     static final int LIMIT = 25;
 
-    // Group Exercise: Write a loop that uses break and continue
+    // Individual Exercise: Write a `while` that uses `break`.
     public static void main(String[] args) throws InterruptedException {
         Random random = new Random();
         int luckyNumber = random.nextInt(LIMIT);

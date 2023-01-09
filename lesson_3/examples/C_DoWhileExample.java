@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class C_DoWhileExample {
 
-    // Group Exercise: Write a do while loop
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
             String input;

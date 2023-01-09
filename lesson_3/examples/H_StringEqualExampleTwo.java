@@ -24,5 +24,7 @@ public class H_StringEqualExampleTwo {
         System.out.printf("identityHashCode(hello3): %s\n", System.identityHashCode(hello3));
         System.out.printf("hello == hello3 -> %s\n", hello == hello3);
         System.out.printf("hello.equals(hello3) -> %s\n", hello.equals(hello3));
+        
+        // Read about more string identity and string pools https://www.baeldung.com/java-string-pool
     }
 }

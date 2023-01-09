@@ -2,6 +2,8 @@ package lesson_3.examples;
 
 import java.util.Arrays;
 
+// Group exercise: rewrite so diagonalBoard also takes args String filledSlot, String unfilledSlot and 
+// uses those two to decide what to print on the diagonal line, and on all other slots.
 public class I_ForMultipleInitsExample {
 
     static String[][] diagonalBoard(int size) {
