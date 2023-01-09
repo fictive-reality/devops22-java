@@ -1,8 +1,9 @@
+
+
 import java.util.Scanner;
 
 public class While {
-
-   public static void main(String[] args){
+    public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
             System.out.print("Guess my favorite number 1-10: ");
             String input = sc.nextLine();
@@ -10,9 +11,12 @@ public class While {
                 System.out.print("Guess my favorite number 1-10: ");
                 input = sc.nextLine();
                 System.out.println(input);
-                System.out.print("You guessed right!");
+                continue;
+            }
+            while ("7".equalsIgnoreCase(input)) {
+                System.out.print("You guessed the right number! ");
+                break;
             }
         }
     }
 }
-
