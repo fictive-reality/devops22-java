@@ -26,3 +26,5 @@ hs_err_pid*
 
 target/
 .DS_Store
+lesson_3/Induvidual_Excersice/.vscode/settings.json
+lesson_3/Group_Exersice/.vscode/settings.json
