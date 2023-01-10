@@ -4,15 +4,17 @@ package lesson_3.examples;
 
 public class L_VariableLengthArgumentExample {
 
-    static int sum(int... terms) {
+    static void sum(int... terms) {
         int sum = 0;
         for (int term : terms) {
             sum += term;
         }
-        return sum;
+        System.out.println(sum);
+        // return sum;
     }
 
     public static void main(String[] args) {
-        System.out.println(sum(1, 2, 3, 4, 5));
+        sum(1, 2, 3, 4, 5);
+        sum(1, 2, 3, 4);
     }
 }

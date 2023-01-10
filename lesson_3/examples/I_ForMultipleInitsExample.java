@@ -6,10 +6,15 @@ import java.util.Arrays;
 // uses those two to decide what to print on the diagonal line, and on all other slots.
 public class I_ForMultipleInitsExample {
 
-    static String[][] diagonalBoard(int size) {
+    static String[][] diagonalBoard(int size, String filledSlot, String unfilledSlot) {
         String[][] board = new String[size][size];
+        for (int x = 0; x < size; x++) {
+            for (int y = 0; y < size; y++) {
+                board[x][y] = unfilledSlot;
+            }
+        }
         for (int x = 0, y = 0; x < size; x++, y++) {
-            board[x][y] = "X";
+            board[x][y] = filledSlot;
         }
         return board;
     }
@@ -22,7 +27,7 @@ public class I_ForMultipleInitsExample {
     }
 
     public static void main(String[] args) {
-        String[][] board = diagonalBoard(10);
+        String[][] board = diagonalBoard(10, "X", "Y");
         printBoard(board);
     }
 }

@@ -24,7 +24,7 @@ public class N_MultiplicationArrays {
         System.out.println(multiplication(1, 2, 3));
         System.out.println(multiplication(1, 2, 3, 0));
 
-        System.out.println(multiplication(1));
+        System.out.println(multiplication(1, 1));
         System.out.println(multiplication(2, 7));
     }
 }
