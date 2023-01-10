@@ -39,7 +39,6 @@ public class WhileLoop {
 
     public static void main(String[] args) {
         WhileLoop whileExample = new WhileLoop(1);
-        System.out.print(whileExample);
         whileExample.whileBreak();
         whileExample.whileContinue();
     }

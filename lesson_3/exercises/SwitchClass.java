@@ -34,7 +34,7 @@ public class SwitchClass {
 
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
-            System.out.print("What model of car are ypu driving?: ");
+            System.out.print("What brand of car are you driving?: ");
             String model = sc.nextLine();
             SwitchClass switchExample = new SwitchClass();
             switchExample.car(model);
