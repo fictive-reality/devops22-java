@@ -12,7 +12,7 @@ The main goal of this exercise is to learn basic java syntax. We will also learn
 
 3. Rewrite to fill a 2D array with values (see I_ForMultipleInitsExample.java)
 
-4. Analyze and describe code in with Multiplication arrays (see N_MultiplicationArrays.java)
+4. Analyze, describe and fix the code with Multiplication arrays (see N_MultiplicationArrays.java)
 
 ### Individual `Exercise` Java Basic syntax
 
