@@ -1,18 +1,18 @@
 package lesson_3.examples.Lesson_003;
 
 public class Lesson_003_Exercise_002 {
-    int radius;
+    float radius;
 
-    public Lesson_003_Exercise_002(int radius) {
+    public Lesson_003_Exercise_002(float radius) {
         this.radius = radius;
     }
 
-    int area() {
-        return (int) (Math.PI * Math.pow(this.radius, 2));
+    public float area() {
+        return (Math.PI * Math.pow(this.radius, 2));
     }
 
-    int circumference() {
-        return (int) (2 * Math.PI * this.radius);
+    public float circumference() {
+        return 2 * Math.PI * this.radius;
     }
 
     public static void main(String[] args) {
