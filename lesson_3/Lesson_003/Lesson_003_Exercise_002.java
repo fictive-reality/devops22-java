@@ -8,16 +8,16 @@ public class Lesson_003_Exercise_002 {
     }
 
     public float area() {
-        return (Math.PI * Math.pow(this.radius, 2));
+        return (float) (Math.PI * Math.pow(this.radius, 2));
     }
 
     public float circumference() {
-        return 2 * Math.PI * this.radius;
+        return (float) (2 * Math.PI * this.radius);
     }
 
     public static void main(String[] args) {
         Lesson_003_Exercise_002 circle = new Lesson_003_Exercise_002(10);
-        System.out.printf("Area of circle is %d\n", circle.area());
-        System.out.printf("Circumference of circle is %d\n", circle.circumference());
+        System.out.println("Area is: " + circle.area());
+        System.out.println("Circumference is: " + circle.circumference());
     }
 }

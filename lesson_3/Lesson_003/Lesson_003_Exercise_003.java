@@ -6,8 +6,11 @@ public class Lesson_003_Exercise_003 {
             while (i < 99) {
                 System.out.println(i);
                 i++;
-                if (i == 44) {
+                if (i >= 98) {
                     break;
+                }
+                else if (i >= 89) {
+                    continue;
                 }
             }
         }
