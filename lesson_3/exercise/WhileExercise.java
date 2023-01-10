@@ -14,9 +14,11 @@ public class WhileExercise {
             } else if ("q".equalsIgnoreCase(input)) {
                 System.out.println("Exiting program. ");
                 break;
-            } else {
-                System.out.println("try again:");
-            }
+            } // else {
+              // System.out.println("try again:");
+              // }
+            System.out.println("hello world ");
         }
+
     }
 }
