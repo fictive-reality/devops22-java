@@ -1,8 +1,8 @@
-package lesson_3.examples.Lesson_003;
+package lesson_3.Lesson_003;
 
 import java.util.Scanner;
 
-public class Lesson_003_Exercise_001 {
+public class Lesson003Exercise001 {
 
     void carSound(String car) {
         switch (car) {
@@ -26,7 +26,7 @@ public class Lesson_003_Exercise_001 {
         try (Scanner sc = new Scanner(System.in)) {
             System.out.print("Enter your car: ");
             String car = sc.nextLine();
-            Lesson_003_Exercise_001 switchExample = new Lesson_003_Exercise_001();
+            Lesson003Exercise001 switchExample = new Lesson003Exercise001();
             switchExample.carSound(car);
         }
     }

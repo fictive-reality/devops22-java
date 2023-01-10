@@ -1,9 +1,9 @@
-package lesson_3.examples.Lesson_003;
+package lesson_3.Lesson003;
 
-public class Lesson_003_Exercise_002 {
+public class Lesson003Exercise002 {
     float radius;
 
-    public Lesson_003_Exercise_002(float radius) {
+    public Lesson003Exercise002(float radius) {
         this.radius = radius;
     }
 
@@ -16,7 +16,7 @@ public class Lesson_003_Exercise_002 {
     }
 
     public static void main(String[] args) {
-        Lesson_003_Exercise_002 circle = new Lesson_003_Exercise_002(10);
+        Lesson003Exercise002 circle = new Lesson003Exercise002(10);
         System.out.println("Area is: " + circle.area());
         System.out.println("Circumference is: " + circle.circumference());
     }
