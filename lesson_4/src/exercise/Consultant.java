@@ -11,7 +11,7 @@ public class Consultant extends EmploymentContract {
         this.department = department;
     }
 
-    public void generate_invoice() {
+    private void generate_invoice() {
         // Nothing here
     }
 }

@@ -13,23 +13,23 @@ public class Administrator extends EmploymentContract {
         this.salary = salary;
     }
 
-    public void support_staff() {
+    private void support_staff() {
         // Nothing here
     }
 
-    public void recruit() {
+    private void recruit() {
         // Nothing here
     }
 
-    public void schedule_planning() {
+    private void schedule_planning() {
         // Nothing here
     }
 
-    public void order_office_material() {
+    private void order_office_material() {
         // Nothing here
     }
 
-    public void register_complaints() {
+    private void register_complaints() {
         // Nothing here
     }
 

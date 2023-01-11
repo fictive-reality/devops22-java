@@ -14,23 +14,23 @@ public class Manager extends EmploymentContract {
         this.bonus = bonus;
     }
 
-    public void hire() {
+    private void hire() {
         // Nonthing here
     }
 
-    public void fire() {
+    private void fire() {
         // Nothing here
     }
 
-    public void salary_deduction() {
+    private void salary_deduction() {
         // Nothing here
     }
 
-    public void lead_staff() {
+    private void lead_staff() {
         // Nothing here
     }
 
-    public void register_complaints() {
+    private void register_complaints() {
         // Nothing here
     }
 
