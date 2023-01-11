@@ -13,6 +13,16 @@ public class Administrator extends EmploymentContract {
         this.salary = salary;
     }
 
+    @Override
+    public void complain() {
+        System.out.println("The coffee sucks");
+    }
+
+    @Override
+    public void quit() {
+        System.out.println("You quit");
+    }
+
     private void support_staff() {
         // Nothing here
     }

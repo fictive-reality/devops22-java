@@ -14,6 +14,16 @@ public class Manager extends EmploymentContract {
         this.bonus = bonus;
     }
 
+    @Override
+    public void complain() {
+        System.out.println("Increase my salary");
+    }
+
+    @Override
+    public void quit() {
+        System.out.println("You cant quit");
+    }
+
     private void hire() {
         // Nonthing here
     }

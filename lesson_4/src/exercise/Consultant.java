@@ -11,6 +11,16 @@ public class Consultant extends EmploymentContract {
         this.department = department;
     }
 
+    @Override
+    public void complain() {
+        System.out.println("Im tired");
+    }
+
+    @Override
+    public void quit() {
+        System.out.println("Talk to your employer");
+    }
+
     private void generate_invoice() {
         // Nothing here
     }

@@ -14,12 +14,10 @@ public class EmploymentContract implements Employee {
 
     }
 
-    @Override
     public void complain() {
         System.out.println("Complaint recieved");
     }
 
-    @Override
     public void quit() {
         System.out.println("You quit");
     }
