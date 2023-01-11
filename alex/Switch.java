@@ -4,14 +4,6 @@ import java.util.Scanner;
 
 public class Switch {
 
-    /**
-     * Returns the length of a month using a switch statement.
-     * Uses .toLowerCase() to make the input case insensitive.
-     * 
-     * @param month
-     * @return String
-     * @author Alex
-     */
     public static String monthLength(String month) {
         switch (month.toLowerCase()) {
             case "february":
@@ -34,13 +26,6 @@ public class Switch {
         }
     }
 
-    /**
-     * Method for printing a message and returning the user input
-     * 
-     * @param message
-     * @return String
-     * @author Alex
-     */
     public static String input(String message) {
         System.out.print(message);
         try (Scanner scanner = new Scanner(System.in)) {
@@ -49,11 +34,7 @@ public class Switch {
     }
 
     public static void main(String[] args) {
-        Utils.clearScreen();
-        Utils.title("Month length calculator\n");
-
         String month = input("Enter a month: ");
         System.out.println(monthLength(month));
-
     }
 }
