@@ -1,12 +1,24 @@
 package exercise;
 
-public class Manager {
+public class Manager extends EmploymentAgreement {
 
-    String department = "Department";
+    private String department = "Department";
 
-    String schedule = "Schedule";
+    private String schedule = "Schedule";
 
-    int salary = 5;
+    private int salary = 5;
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public String getSchedule() {
+        return schedule;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
 
     public String hire() {
         return "Hire";
@@ -29,5 +41,10 @@ public class Manager {
 
     public String registerComplaints() {
         return "register Complaints";
+    }
+
+    @Override
+    public String duties() {
+        return "Manage";
     }
 }

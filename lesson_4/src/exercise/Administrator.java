@@ -1,12 +1,24 @@
 package exercise;
 
-public class Administrator {
+public class Administrator extends EmploymentAgreement {
 
-    String department = "Department";
+    private String department = "Department";
 
-    String schedule = "Schedule";
+    private String schedule = "Schedule";
 
-    int salary = 5;
+    private int salary = 5;
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public String getSchedule() {
+        return schedule;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
 
     public String staffSupport() {
         return "Staff Support";
@@ -22,5 +34,10 @@ public class Administrator {
 
     public String registerComplaints() {
         return "register Complaints";
+    }
+
+    @Override
+    public String duties() {
+        return "Administer";
     }
 }
