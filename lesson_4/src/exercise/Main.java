@@ -5,7 +5,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-
+        /**
+         * Some one should document this!
+         */
         Manager manager = new Manager();
         Administrator administrator = new Administrator();
         Consultant consultant = new Consultant();
@@ -19,7 +21,9 @@ public class Main {
             a.complaint();
             a.quit();
         });
-
+        /**
+         * Checking if all values can be accessed.
+         */
         System.out.println("\nAdministrator: ");
         System.out.println(administrator.name());
         System.out.println(administrator.employeeId());

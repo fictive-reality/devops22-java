@@ -2,12 +2,19 @@ package exercise;
 
 public class Administrator extends EmploymentAgreement {
 
+    /**
+     * Holds the value of the department.
+     */
     private String department = "Department";
 
     private String schedule = "Schedule";
 
     private int salary = 5;
 
+    /**
+     * 
+     * @return the department
+     */
     public String getDepartment() {
         return department;
     }
