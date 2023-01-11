@@ -1,7 +1,5 @@
 package exercises;
 
-//mport java.math.*;
-
 public class Circle {
     double radius;
 
@@ -9,22 +7,20 @@ public class Circle {
         this.radius = radius;
     }
 
-    public void circumference() {
-        double circumference = (this.radius * 2) * Math.PI;
-        System.out.println("Circumference of the circle is: " + circumference);
-
+    public double circumference(double radius) {
+        double result = (this.radius * 2) * Math.PI;
+        return result;
     }
 
-    public void area() {
-        double area = Math.pow(this.radius, 2) * Math.PI;
-        System.out.println("Area of the circle is: " + area);
-
+    public double area(double radius) {
+        double result = Math.pow(this.radius, 2) * Math.PI;
+        return result;
     }
 
     public static void main(String[] args) {
         Circle circle = new Circle(5);
-        circle.circumference();
-        circle.area();
+        System.out.println(circle.circumference(5));
+        System.out.println(circle.area(5));
 
     }
 }
