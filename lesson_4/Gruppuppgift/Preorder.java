@@ -1,7 +1,10 @@
 package lesson_4.Gruppuppgift;
 
-interface PreOrder {
-
-    public void preOrder();
-
+public interface Preorder {
+    
+    public static void preOrder(){
+        System.out.println("Testing interface 2");
+    }
+    
 }
+

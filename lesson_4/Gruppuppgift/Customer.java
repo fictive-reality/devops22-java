@@ -10,9 +10,15 @@ public class Customer {
     public String address;
     public List<String> orderhistory = new ArrayList<String>();
 
-    // Customer fabian = new Customer();
 
     public static void recieveOrder() {
         System.out.println("Test recieveOrder");
     }
+
+    private static void printName() {
+        System.out.println("fabian Lörstad");
+    }
+
+
 }
+
