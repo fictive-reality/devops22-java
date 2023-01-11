@@ -2,25 +2,25 @@ package exercise;
 
 public class Administrator {
 
-    String department = "hello";
+    String department = "Department";
 
-    String schedule = "schedule";
+    String schedule = "Schedule";
 
     int salary = 5;
 
-    private String staffSupport() {
+    public String staffSupport() {
         return "Staff Support";
     }
 
-    private String recruiter() {
+    public String recruiter() {
         return "recruiter";
     }
 
-    private String buyinmaterials() {
-
+    public String purchaseInventory() {
+        return "purchase inventory";
     }
 
-    private String registerComplaints() {
-
+    public String registerComplaints() {
+        return "register Complaints";
     }
 }
