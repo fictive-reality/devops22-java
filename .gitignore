@@ -26,3 +26,5 @@ hs_err_pid*
 
 target/
 .DS_Store
+lesson_4/Lesson_4_Exercise/.vscode/settings.json
+lesson_4/Lesson_4_Exercise/README.md
