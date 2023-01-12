@@ -1,50 +1,145 @@
 package exercise;
 
-public class Manager extends EmploymentAgreement {
+public class Manager extends Employee {
 
-    private String department = "Department";
+    private String name;
+    private String department;
+    private String areaOfOperation;
+    private String duties;
+    private String complaint;
+    private String quit;
+    private String schedule;
+    private int salary;
 
-    private String schedule = "Schedule";
+    /**
+     * @return
+     */
+    @Override
+    public String getName() {
+        return name;
+    }
 
-    private int salary = 5;
+    /*
+     * (non-Javadoc)
+     * 
+     * @see exercise.Employee#setGetName(java.lang.String)
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    /*
+     * (non-Javadoc)
+     * 
+     * @see exercise.Employee#getDepartment()
+     */
+    @Override
     public String getDepartment() {
         return department;
     }
 
+    /*
+     * (non-Javadoc)
+     * 
+     * @see exercise.Employee#setDepartment(java.lang.String)
+     */
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see exercise.Staff#getAreaOfOperation()
+     */
+    @Override
+    public String getAreaOfOperation() {
+        return areaOfOperation;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see exercise.Employee#setAreaOfOperation(java.lang.String)
+     */
+    public void setAreaOfOperation(String areaOfOperation) {
+        this.areaOfOperation = areaOfOperation;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see exercise.Staff#getDuties()
+     */
+    @Override
+    public String getDuties() {
+        return duties;
+    }
+
+    public void setDuties(String duties) {
+        this.duties = duties;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see exercise.Staff#getComplaint()
+     */
+    @Override
+    public String getComplaint() {
+        return complaint;
+    }
+
+    /**
+     * @param complaint
+     */
+    public void setComplaint(String complaint) {
+        this.complaint = complaint;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see exercise.Staff#getQuit()
+     */
+    @Override
+    public String getQuit() {
+        return quit;
+    }
+
+    /**
+     * @param quit
+     */
+    public void setQuit(String quit) {
+        this.quit = quit;
+    }
+
+    /**
+     * @return
+     */
     public String getSchedule() {
         return schedule;
     }
 
+    /**
+     * @param schedule
+     */
+    public void setSchedule(String schedule) {
+        this.schedule = schedule;
+    }
+
+    /**
+     * @return
+     */
     public int getSalary() {
         return salary;
     }
 
-    public String hire() {
-        return "Hire";
+    /**
+     * @param salary
+     */
+    public void setSalary(int salary) {
+        this.salary = salary;
     }
 
-    public String fire() {
-        return "Fire";
-
-    }
-
-    public String salaryDeductions() {
-        return "Salary deductions";
-
-    }
-
-    public String manageStaff() {
-        return "Manage staff";
-
-    }
-
-    public String registerComplaints() {
-        return "register Complaints";
-    }
-
-    @Override
-    public String duties() {
-        return "Manage";
-    }
 }

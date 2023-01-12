@@ -1,35 +1,41 @@
 package exercise;
 
-public class EmploymentAgreement implements Employee {
+public class EmploymentAgreement implements Staff {
 
     @Override
-    public void complaint() {
-        System.out.println("You have complained. ");
+    public String getName() {
+        // TODO Auto-generated method stub
+        return null;
     }
 
     @Override
-    public void quit() {
-        System.out.println("You have quit. ");
+    public String getDepartment() {
+        // TODO Auto-generated method stub
+        return null;
     }
 
-    public String name() {
-        return "You have a name. ";
+    @Override
+    public String getAreaOfOperation() {
+        // TODO Auto-generated method stub
+        return null;
     }
 
-    public String employeeId() {
-        return "Employee id ";
+    @Override
+    public String getDuties() {
+        // TODO Auto-generated method stub
+        return null;
     }
 
-    public String areaOfOperation() {
-        return "areaOfOperation ";
+    @Override
+    public String getComplaint() {
+        // TODO Auto-generated method stub
+        return null;
     }
 
-    public String employmentDate() {
-        return "employmentDate ";
-    }
-
-    public String duties() {
-        return "duties";
+    @Override
+    public String getQuit() {
+        // TODO Auto-generated method stub
+        return null;
     }
 
 }
