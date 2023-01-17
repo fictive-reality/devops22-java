@@ -9,8 +9,12 @@ public class Main {
         JDBCUtils jdbcUtils = new JDBCUtils("localhost");
         jdbcUtils.setUsername("root"); // Never use the root user in real apps
         jdbcUtils.setPassword("my-secret-pw"); // Never add hardcoded passwords to your code
-
         Connection conn = jdbcUtils.getConnection();
-        jdbcUtils.createDatabase(conn, "example"); // This will create the database with no tables
+        jdbcUtils.createDatabase(conn, "fabian_2"); // This will create the database with no tables
+        jdbcUtils.insertData(conn);
+        jdbcUtils.readData(conn);
+        jdbcUtils.updateRow(conn);
+        jdbcUtils.readData(conn);
+        jdbcUtils.deleteRow(conn);
     }
 }
