@@ -11,25 +11,38 @@ public class Main {
         jdbcUtils.setPassword("example"); // Never add hardcoded passwords to your code
 
         Connection conn = jdbcUtils.getConnection();
-        jdbcUtils.createDatabase(conn, "devops22"); // This will create the database with no tables
 
-        jdbcUtils.createTable(conn, "testTable"); // This will create the table with no data
+        // This will create the database with no tables
+        jdbcUtils.createDatabase(conn, "devops22");
 
-        jdbcUtils.insertData(conn, "testTable", 1, "devops-22"); // This will insert data into the table
+        // This will create the table with no data
+        jdbcUtils.createTable(conn, "students");
 
-        jdbcUtils.readData(conn, "testTable"); // This will read data from the table
+        // This will insert data to the table
+        jdbcUtils.insertData(conn, "students", "Fredrik Magnusson");
+        jdbcUtils.insertData(conn, "students", "Johan Andersson");
+        jdbcUtils.insertData(conn, "students", "Kalle Karl");
 
-        jdbcUtils.updateData(conn, "testTable", 1, "devops-22-updated"); // This will update data in the table
+        // This will read data from the table
+        jdbcUtils.readData(conn, "students");
 
-        jdbcUtils.readData(conn, "testTable"); // This will read data from the table
+        // This will update data in the table
+        // jdbcUtils.updateData(conn, "students", 1, "Fredrik Nilsson");
 
-        jdbcUtils.deleteData(conn, "testTable", 1); // This will delete data from the table
+        // This will read data from the table
+        // jdbcUtils.readData(conn, "students");
 
-        jdbcUtils.readData(conn, "testTable"); // This will read data from the table
+        // This will delete data from the table
+        // jdbcUtils.deleteData(conn, "students", 1);
 
-        // jdbcUtils.dropTable(conn, "testTable"); // This will drop the table
+        // This will read data from the table
+        // jdbcUtils.readData(conn, "students");
 
-        // jdbcUtils.dropDatabase(conn, "devops22"); // This will drop the database
+        // This will drop the table
+        // jdbcUtils.dropTable(conn, "students");
+
+        // This will drop the database
+        // jdbcUtils.dropDatabase(conn, "devops22");
 
         conn.close();
     }

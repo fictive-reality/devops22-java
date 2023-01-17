@@ -54,7 +54,8 @@ class JDBCUtils {
     }
 
     public void createTable(Connection conn, String name) throws SQLException {
-        String createString = "create table IF NOT EXISTS " + name + " (id int, name varchar(255))";
+        String createString = "create table IF NOT EXISTS " + name
+                + " (id INT NOT NULL AUTO_INCREMENT, name VARCHAR(255) NOT NULL, PRIMARY KEY (id));";
 
         try (Statement stmt = conn.createStatement()) {
             stmt.executeUpdate(createString);
@@ -64,12 +65,12 @@ class JDBCUtils {
 
     }
 
-    public void insertData(Connection conn, String name, int id, String name2) throws SQLException {
-        String createString = "insert into " + name + " (id, name) values (?, ?)";
+    public void insertData(Connection conn, String name, String name2) throws SQLException {
+        String createString = "insert into " + name + " (name) values (?)";
 
         try (PreparedStatement stmt = conn.prepareStatement(createString)) {
-            stmt.setInt(1, id);
-            stmt.setString(2, name2);
+            stmt.setString(1, name);
+            stmt.setString(1, name2);
             stmt.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e);
