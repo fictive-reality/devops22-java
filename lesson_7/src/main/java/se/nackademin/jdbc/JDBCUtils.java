@@ -2,6 +2,8 @@ package se.nackademin.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
@@ -42,10 +44,46 @@ class JDBCUtils {
         connectionProps.put("user", this.userName);
         connectionProps.put("password", this.password);
 
-        // Modify the "/" after this.port to set a specific database
-        conn = DriverManager.getConnection("jdbc:mysql://" + this.hostname + ":" + this.port + "/", connectionProps);
+        conn = DriverManager.getConnection("jdbc:mysql://" + this.hostname + ":" + this.port + "/exampleDB", connectionProps);
 
-        System.out.println("Connected to db");
+        //System.out.println("Connected to db");
         return conn;
     }
+
+    public void createTable() throws SQLException {
+        Connection conn = getConnection();
+        String sqlCreate = "CREATE TABLE IF NOT EXISTS people("
+                + "name           VARCHAR(10),"
+                + "age            INTEGER)";
+
+        Statement stmt = conn.createStatement();
+        stmt.execute(sqlCreate);
+        conn.close();
+    }
+
+    public void insertPerson() throws SQLException {
+        Connection conn = getConnection();
+        String SQL = "INSERT INTO people(name,age) "
+                + "VALUES('Gustav',26)";
+
+        Statement stmt = conn.createStatement();
+        stmt.execute(SQL);
+        conn.close();
+
+    }
+
+    public void getTableContent() throws SQLException {
+        Connection conn = getConnection();
+        String SQL = "SELECT * FROM people";
+
+        PreparedStatement p = conn.prepareStatement(SQL);
+        ResultSet rs = p.executeQuery();
+        while (rs.next()) {
+ 
+            int age = rs.getInt("Age");
+            String name = rs.getString("Name");
+            System.out.println(name + " " + age);
+        }
+    }
+
 }
