@@ -12,5 +12,10 @@ public class Main {
 
         Connection conn = jdbcUtils.getConnection();
         jdbcUtils.createDatabase(conn, "example"); // This will create the database with no tables
+        jdbcUtils.createTable(conn);
+        jdbcUtils.addDataToTable(conn);
+        jdbcUtils.readDatabase(conn);
+        jdbcUtils.updateDatabase(conn);
+        jdbcUtils.deleteFromDatabase(conn);
     }
 }
