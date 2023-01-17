@@ -2,7 +2,7 @@
 
 ## Instructions
 
-The main goal of this exercise is to learn Java class syntax and object oriented design. 
+The main goal of this exercise is to learn Java class syntax and object oriented design. Before you start, take Open Folder in VS Code and choose to open lesson_4 folder directly.
 
 ### Group `Exercise` Object Oriented Java
 
