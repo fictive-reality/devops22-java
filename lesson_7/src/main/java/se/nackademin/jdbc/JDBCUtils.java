@@ -2,6 +2,7 @@ package se.nackademin.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
@@ -42,10 +43,52 @@ class JDBCUtils {
         connectionProps.put("user", this.userName);
         connectionProps.put("password", this.password);
 
-        // Modify the "/" after this.port to set a specific database
-        conn = DriverManager.getConnection("jdbc:mysql://" + this.hostname + ":" + this.port + "/", connectionProps);
+        System.out.println("Loading driver...");
 
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            System.out.println("Driver loaded!");
+        } catch (ClassNotFoundException e) {
+            throw new IllegalStateException("Cannot find the driver in the classpath!", e);
+        }
+
+        // Modify the "/" after this.port to set a specific database
+        conn = DriverManager.getConnection("jdbc:mysql://" + this.hostname + ":" + this.port + "/Lesson7",
+                connectionProps);
         System.out.println("Connected to db");
         return conn;
+
     }
+
+    public void createTable(String tablename) throws SQLException {
+        Connection conn = getConnection();
+        String createString = "CREATE TABLE IF NOT EXISTS `Lesson7`.`" + tablename
+                + "` (`id` INT NOT NULL AUTO_INCREMENT, `name` VARCHAR(45) NOT NULL, `email` VARCHAR(45) NOT NULL, `password` VARCHAR(45) NOT NULL, PRIMARY KEY (`id`));";
+        Statement stmt = conn.createStatement();
+        stmt.executeUpdate(createString);
+        System.out.println("Table created");
+        conn.close();
+    }
+
+    public void insertIntoTable(String table, String name, String email, String password) throws SQLException {
+        Connection conn = getConnection();
+        String insertString = "INSERT INTO `Lesson7`.`" + table + "` (`name`, `email`, `password`) VALUES ('" + name
+                + "', '" + email + "', '" + password + "');";
+        Statement stmt = conn.createStatement();
+        stmt.executeUpdate(insertString);
+        System.out.println("Data inserted");
+        conn.close();
+    }
+
+    public void readTable(String table) throws SQLException {
+        Connection conn = getConnection();
+        String readString = "SELECT * FROM `Lesson7`.`" + table + "`;";
+        Statement stmt = conn.createStatement();
+        ResultSet rs = stmt.executeQuery(readString);
+        while (rs.next()) {
+            System.out.println(rs.getString("name") + " " + rs.getString("email") + " " + rs.getString("password"));
+        }
+        conn.close();
+    }
+
 }

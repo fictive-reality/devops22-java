@@ -1,4 +1,4 @@
-package lesson_5.examples.collections;
+package se.nackademin.jdbc;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package lesson_5.examples.collections;
+package se.nackademin.jdbc;
 
 public class Custom implements Comparable<Custom> {
     private String name;
