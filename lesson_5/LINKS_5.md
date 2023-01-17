@@ -5,6 +5,7 @@
 - Maven in [five-minutes](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)
 - Maven [Getting Started Guide](https://maven.apache.org/guides/getting-started/index.html)
 - Maven [introduction to the build lifecycle](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html)
+- Maven [standard directory structure](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)
 
 ## Junit
 
