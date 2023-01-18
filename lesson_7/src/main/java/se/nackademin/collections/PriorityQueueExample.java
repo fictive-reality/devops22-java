@@ -1,4 +1,4 @@
-package lesson_5.examples.collections;
+package se.nackademin.collections;
 
 import java.util.PriorityQueue;
 
