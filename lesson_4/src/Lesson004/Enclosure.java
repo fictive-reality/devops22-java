@@ -1,5 +1,3 @@
-package Lesson004;
-
 class Enclosure {
 	private double size; // in sq ft
 	private bool dirty;

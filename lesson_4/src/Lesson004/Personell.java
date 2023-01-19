@@ -1,5 +1,3 @@
-package Lesson004;
-
 class Personell {
 	private String name;
 	private int age;
@@ -12,7 +10,7 @@ class Personell {
 	public int getSalary() { return this.salary; }
 
 	public void sell() {}
-	public void feed_animal(Animal animal) {}
+	public void feedAnimal(Animal animal) {}
 	public void clean(Enclosure enclosure) {}
 	public void acceptPayment() {}
 }
