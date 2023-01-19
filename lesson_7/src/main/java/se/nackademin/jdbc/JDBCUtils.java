@@ -60,6 +60,8 @@ class JDBCUtils {
 
     }
 
+    // CRUD methods
+
     public void createTable(String tablename) throws SQLException {
         Connection conn = getConnection();
         String createString = "CREATE TABLE IF NOT EXISTS `Lesson7`.`" + tablename
@@ -67,6 +69,36 @@ class JDBCUtils {
         Statement stmt = conn.createStatement();
         stmt.executeUpdate(createString);
         System.out.println("Table created");
+        conn.close();
+    }
+
+    public void readTable(String table) throws SQLException {
+        Connection conn = getConnection();
+        String readString = "SELECT * FROM `Lesson7`.`" + table + "`;";
+        Statement stmt = conn.createStatement();
+        ResultSet rs = stmt.executeQuery(readString);
+        while (rs.next()) {
+            System.out.println(rs.getString("name") + " " + rs.getString("email") + " " + rs.getString("password"));
+        }
+        conn.close();
+    }
+
+    public void updateTable(String table, String name, String email, String password) throws SQLException {
+        Connection conn = getConnection();
+        String updateString = "UPDATE `Lesson7`.`" + table + "` SET `name` = '" + name + "', `email` = '" + email
+                + "', `password` = '" + password + "' WHERE (`id` = '1');";
+        Statement stmt = conn.createStatement();
+        stmt.executeUpdate(updateString);
+        System.out.println("Data updated");
+        conn.close();
+    }
+
+    public void deleteFromTable(String table) throws SQLException {
+        Connection conn = getConnection();
+        String deleteString = "DELETE FROM `Lesson7`.`" + table + "` WHERE (`id` = '1');";
+        Statement stmt = conn.createStatement();
+        stmt.executeUpdate(deleteString);
+        System.out.println("Data deleted");
         conn.close();
     }
 
@@ -80,14 +112,21 @@ class JDBCUtils {
         conn.close();
     }
 
-    public void readTable(String table) throws SQLException {
+    public void dropTable(String table) throws SQLException {
         Connection conn = getConnection();
-        String readString = "SELECT * FROM `Lesson7`.`" + table + "`;";
+        String dropString = "DROP TABLE `Lesson7`.`" + table + "`;";
         Statement stmt = conn.createStatement();
-        ResultSet rs = stmt.executeQuery(readString);
-        while (rs.next()) {
-            System.out.println(rs.getString("name") + " " + rs.getString("email") + " " + rs.getString("password"));
-        }
+        stmt.executeUpdate(dropString);
+        System.out.println("Table dropped");
+        conn.close();
+    }
+
+    public void dropDatabase(String database) throws SQLException {
+        Connection conn = getConnection();
+        String dropString = "DROP DATABASE `" + database + "`;";
+        Statement stmt = conn.createStatement();
+        stmt.executeUpdate(dropString);
+        System.out.println("Database dropped");
         conn.close();
     }
 
