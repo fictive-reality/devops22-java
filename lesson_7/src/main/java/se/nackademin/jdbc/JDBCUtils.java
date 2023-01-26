@@ -64,6 +64,42 @@ class JDBCUtils {
         return false;
     }
 
+    public void readTable() {
+        String sql = "SELECT * FROM legends";
+        try (Statement stmt = conn.createStatement(); ResultSet rs = stmt.executeQuery(sql)) {
+            while (rs.next()) {
+                String id = rs.getString("id");
+                String name = rs.getString("name");
+                String status = rs.getString("status");
+                String sport = rs.getString("sport");
+                System.out.println(id + " " + name + " " + status + " " + sport);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void printRow(int id) {
+        try {
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM legends WHERE id = " + id);
+
+            while (rs.next()) {
+                String name = rs.getString("name");
+                String status = rs.getString("status");
+                String sport = rs.getString("sport");
+
+                System.out.println("ID: " + id);
+                System.out.println("Name:  " + name);
+                System.out.println("Status: " + status);
+                System.out.println("Status: " + sport);
+            }
+            stmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public String[][] read() {
         String sql = "SELECT * FROM legends";
         List<String[]> results = new ArrayList<String[]>();
@@ -71,11 +107,11 @@ class JDBCUtils {
             ResultSet rs = stmt.executeQuery(sql);
             while (rs.next()) {
                 String id = rs.getString("id");
-                String title = rs.getString("name");
-                String price = rs.getString("status");
-                String creator = rs.getString("sport");
+                String name = rs.getString("name");
+                String status = rs.getString("status");
+                String sport = rs.getString("sport");
 
-                results.add(new String[] { id, title, price, creator });
+                results.add(new String[] { id, name, status, sport });
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -111,10 +147,9 @@ class JDBCUtils {
         }
     }
 
-
     public Connection getConnection() throws SQLException {
 
-        //Connection conn = null;
+        // Connection conn = null;
         Properties connectionProps = new Properties();
         connectionProps.put("user", this.userName);
         connectionProps.put("password", this.password);
@@ -127,4 +162,3 @@ class JDBCUtils {
         return conn;
     }
 }
-
